@@ -1,0 +1,83 @@
+{
+    "formularios" : 
+    [
+        {
+            "nombre" : "Formulario de covid",
+            "campos" : 
+            [
+
+                {
+                    "label" : "Nombre",
+                    "type" : "text",
+                    "required" : true,
+                    "placeholder" : "Nombre"
+                },
+                {
+                    "label" : "apellido",
+                    "type" : "text",
+                    "required" : true,
+                    "placeholder" : "apellido"
+                },
+                {
+                    "label" : "telèfono",
+                    "type" : "number",
+                    "required" : true,
+                    "placeholder" : "telèfono"
+                },
+                {
+                    "label" : "email",
+                    "type" : "email",
+                    "required" : true,
+                    "placeholder" : "email"
+                },
+                {
+                    "label" : "acepto terminos y condiciones",
+                    "type" : "checkbox",
+                    "required" : true
+                },
+                {
+                    "label" : "",
+                    "type" : "submit",
+                    "required" : true,
+                    "placeholder" : "Enviar",
+                    "styles" : "btn-primary btn my-3"
+                }
+                
+            ]
+        },
+        {
+            "nombre" : "Formulario login",
+            "campos" : 
+            [
+
+                {
+                    "label" : "Nombre",
+                    "type" : "text",
+                    "required" : true,
+                    "placeholder" : "Nombre"
+                },
+                {
+                    "label" : "apellido",
+                    "type" : "text",
+                    "required" : true,
+                    "placeholder" : "apellido"
+                },
+
+                {
+                    "label" : "Contraseña",
+                    "type" : "password",
+                    "required" : true,
+                    "placeholder" : "email"
+                },
+
+                {
+                    "label" : "",
+                    "type" : "submit",
+                    "required" : true,
+                    "placeholder" : "Login",
+                    "styles" : "btn-primary btn my-3"
+                }
+            ]
+        }
+    ]
+}
