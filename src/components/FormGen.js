@@ -8,7 +8,7 @@ const FormGen = ({ form, nombre }) => {
   return (
     <>
       <form className="form-control covid-form">
-        <h3 className="text-center">{nombre}</h3>
+        <h3 className="text-center text-capitalize">{nombre}</h3>
         <Input className="form-control" campos={campos} />
       </form>
     </>

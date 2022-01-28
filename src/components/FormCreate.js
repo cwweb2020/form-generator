@@ -3,6 +3,8 @@ import { useRef } from "react";
 import CreateCampos from "./CreateCampos";
 import FieldsTable from "./FieldsTable";
 
+ import { FormConsumer } from "../context";
+
 const FormCreate = () => {
   const formulario= useRef()
   const [showForm, setShowForm] = useState(false);
@@ -11,6 +13,9 @@ const FormCreate = () => {
     campos: [],
   });
 
+
+  // extraigo del context
+  const { agregarFormulario } = FormConsumer();
 
   const agregarCampos = (campo) => {
       setForm({
@@ -24,6 +29,15 @@ const FormCreate = () => {
       setShowForm(false)
   }
 
+  const handleClick = (e) => {
+    agregarFormulario(form)
+    setForm(
+        {
+          nombre: "",
+          campos: [],
+        }
+    )
+  }
 
   
   return (
@@ -57,19 +71,20 @@ const FormCreate = () => {
              !showForm && 
            <>
                {form.campos.length > 0 && <FieldsTable campos={form.campos} />}
-               {form.campos.length < 1 && <h4 className="text-center">No hay campos</h4>}
+               {form.campos.length === 0 && <h4 className="text-center">No hay campos</h4>}
 
            </>
 
            }
             <button
               className="boton-finalizar btn btn-success"
-              type="submit"
+              type="button"
               style={{
                 width: "100%",
                 marginTop: "80px"
 
               }}
+              onClick={handleClick}
             >
               Finalizar
             </button>

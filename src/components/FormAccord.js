@@ -1,9 +1,9 @@
 import React from "react";
 import FormGen from "./FormGen";
-import config from "../config";
+import { FormConsumer } from "../context";
 
 const FormAccord = () => {
-    const form = config.formularios;
+  const { formularios } = FormConsumer();
 
     
   return (
@@ -11,7 +11,7 @@ const FormAccord = () => {
       <section className="accor-total">
         <div className="container wrapper">
           <div className="accordion" id="accordionExample">
-            {form.map((f, index) => (
+            {formularios.map((f, index) => (
               <div className="accordion-item" key={index}>
                 <h2 className="accordion-header" id="headingOne">
                   <button

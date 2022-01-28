@@ -15,6 +15,7 @@ const CreateCampos = ({ agregarCampos }) => {
     label: "",
     type: "",
     required: false,
+    styles: ""
   });
 
   // crea un campo
@@ -44,6 +45,18 @@ const CreateCampos = ({ agregarCampos }) => {
           </option>
         ))}
       </select>
+        {
+          input.type === "submit" && <div className="d-flex flex-column mt-5">
+            
+             <input type="text" 
+               placeholder="estilo del boton"
+               onChange={CreateItem}
+               name="styles"
+               className="my-2"
+             />
+              <label>Colocar estilos bootstrap v5 - <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" target="_blank">ir a bootstrap</a> </label>
+          </div>
+        }
       <div
         className="d-flex align-items-center justify-content-between"
         style={{ width: "28%" }}
