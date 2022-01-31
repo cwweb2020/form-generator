@@ -74,7 +74,7 @@ const CreateCampos = ({ agregarCampos }) => {
       </div>
 
       <button
-        className="btn btn-info"
+        className="btn btn-outline-primary"
         type="button"
         onClick={() => agregarCampos(input)}
         style={{ width: "50%", margin: "auto" }}
