@@ -11,7 +11,7 @@ const FormAccord = () => {
       <section className="accor-total">
         <div className="container wrapper">
           <div className="accordion" id="accordionExample">
-            {formularios.map((f, index) => (
+            {formularios.length > 0 ? formularios.map((f, index) => (
               <div className="accordion-item" key={index}>
                 <h2 className="accordion-header" id="headingOne">
                   <button
@@ -36,7 +36,8 @@ const FormAccord = () => {
                   </div>
                 </div>
               </div>
-            ))}
+            )) 
+            : <h3 className="text-center">No hay formularios creados</h3>}
           </div>
         </div>
       </section>
